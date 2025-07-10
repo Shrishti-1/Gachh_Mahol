@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar with Logo</title>
+    <link href="https://docs.google.com/forms/d/e/1FAIpQLScBX5ZjmZPca09hjEY2Mf6_tUfEXqdm3B_YdR__nI0AbguSPQ/viewform?usp=sharing&ouid=115337911380711970404" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.svg" alt="Logo" class="logo-icon">
+            <span class="logo-text">
+                <span>Gachh</span><br>
+                <span>Mahol</span>
+            </span>
+        </div>
+
+<ul class="navbar-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html" >About</a></li>
+  <li><a href="services.html" class="active">Services</a></li>
+  <li><a href="credits.html">Credits</a></li>
+</ul>
+ 
+
+
+</nav>
+<div class="services-container">
+  <a href="https://docs.google.com/forms/d/1KtOWKcl-GO78jnq2FewkP5Njnx3RpSM5VKvyCT_ddfo/edit" class="circle-button"></a>
+
+  <main class="Description-container">
+    <h1 class="Description-title">Guess Who We Admire</h1>
+
+    <div class="Description-box">
+      <p>Click the Gachh Mahol logo followed by </p>
+      <p> the button to explore our services. Use LDAP ID</p>
+    </div>
+  </main>
+</div>
+
+   
+Background Music
+<audio id="background-music" src="services.mp3" autoplay loop></audio>
+
+<script>
+  document.body.addEventListener('click', () => {
+    const audio = document.getElementById('background-music');
+    if (audio.paused) {
+      audio.play();
+    }
+  }, { once: true });
+</script>
+
+</body>
+</html>

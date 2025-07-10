@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.services-container {
+  text-align: center;
+}
+
+.circle-button {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  background-color: red;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.circle-button:hover {
+  background-color: black;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.button-description {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #f0f0f0;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar with Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.svg" alt="Logo" class="logo-icon">
+            <span class="logo-text">
+                <span>Gachh</span><br>
+                <span>Mahol</span>
+            </span>
+        </div>
+
+        <ul class="navbar-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="credits.html">Credits</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+        <div class="image-container">
+            <img src="logo.svg" alt="React Logo" id="animated-logo">
+
+            <div class="stacked-images">
+                <img src="HM productions.svg" alt="Fading Image" id="fade-in-svg">
+                <img src="Havaldar Music.svg" alt="Side Image" id="side-slide-in">
+                <img src="RSS.svg" alt="Rotating Image" id="rotate-fade-svg">
+            </div>
+        </div>
+    </main>
+    <!-- Audio elements -->
+<audio id="audio-hm" src="hm.mp3"></audio>
+<audio id="audio-havaldar" src="havaldar.mp3"></audio>
+<audio id="audio-rss" src="rss.mp3"></audio>
+
+<script>
+    // Wait until page loads
+    window.addEventListener('DOMContentLoaded', () => {
+        // Play sound for HM Productions
+        setTimeout(() => {
+            document.getElementById('audio-hm').play();
+        }, 4500); // Same as #fade-in-svg delay
+
+        // Play sound for Havaldar Music
+        setTimeout(() => {
+            document.getElementById('audio-havaldar').play();
+        }, 7000); // Same as #side-slide-in delay
+
+        // Play sound for RSS
+        setTimeout(() => {
+            document.getElementById('audio-rss').play();
+        }, 9000); // Same as #rotate-fade-svg delay
+    });
+
+
+    document.body.addEventListener('click', () => {
+        document.getElementById('audio-hm').play();
+        document.getElementById('audio-hm').pause();
+        document.getElementById('audio-havaldar').play();
+        document.getElementById('audio-havaldar').pause();
+        document.getElementById('audio-rss').play();
+        document.getElementById('audio-rss').pause();
+    }, { once: true });
+
+</script>
+</body>
+</html>
